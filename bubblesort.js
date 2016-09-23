@@ -7,22 +7,18 @@ var storeArray =[];
 var counter = 0;
 console.log("array",array);
 for(var r = 0; r < array.length; r++){
-
    for(var i = 0; i <array.length; i++){
     if(array[i] > array[i+1]){
       storeArray.push(array[i]);
-      //console.log("store array",storeArray);
-      //console.log("array",array);
       array.splice(i,1);
-      //console.log("array",array);
-     // console.log("store array", storeArray);
       array.splice(i+1,0,storeArray[0]);
-      console.log("array",array);
       storeArray.pop();
       counter++;
     }
   }
-}console.log("it takes " + counter +" passes to sort.");
+}
+console.log("it takes " + counter +" passes to sort.");
+return array;
 //console.log(array);
 //console.log(array);
 return array;
